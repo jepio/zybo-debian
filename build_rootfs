@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rootfs_dir=rootfs
+distro=buster
+
+sudo debootstrap --arch=armhf --foreign $distro $rootfs_dir
+sudo cp /etc/resolv.conf rootfs/etc/resolv.conf
+sudo chroot $rootfs_dir /debootstrap/debootstrap --second-stage
