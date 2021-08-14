@@ -28,8 +28,7 @@ jobs:
         uses: docker/setup-qemu-action@v1.2.0
         with:
         # Platforms to install (e.g. arm64,riscv64,arm)
-        platforms:
-          - all
+          platforms: all
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: ./build_rootfs
